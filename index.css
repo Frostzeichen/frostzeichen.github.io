@@ -1,0 +1,14 @@
+a {
+  color: gray;
+
+}
+
+a:hover {
+  color: blue;
+}
+
+.bodySegment {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
