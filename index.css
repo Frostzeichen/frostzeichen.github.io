@@ -25,6 +25,13 @@ a:hover {
 .bodySegment {
   order: 2;
   flex-grow: 5;
+  padding-left: 10%;
+}
+
+@media (max-width: 600px) {
+  .bodySegment {
+    padding-left: 0;
+  }
 }
 
 .navSegment {
