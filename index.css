@@ -7,8 +7,32 @@ a:hover {
   color: blue;
 }
 
+.mainsFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 600px) {
+  .mainsFlex {
+    flex-direction: column;
+  }
+  .navSegment {
+    padding-left: auto;
+    padding-right: 300px;
+  }
+}
+
 .bodySegment {
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px;
+  order: 2;
+  flex-grow: 5;
+}
+
+.navSegment {
+  order: 1;
+  flex-grow: 2;
+  flex-basis: 50px;
+}
+
+.footerSegment {
+  text-align: left;
 }
