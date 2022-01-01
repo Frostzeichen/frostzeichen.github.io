@@ -1,4 +1,1 @@
-let introTextContent = () => {
-  JSintroText = document.getElementById("introText");
-  JSintroText.innerHTML += "Looks kinda boring here.";  
-}
+document.getElementById("introText").innerHTML = "Looks a bit boring here right now...";
