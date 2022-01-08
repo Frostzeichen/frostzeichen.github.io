@@ -20,10 +20,31 @@ body {
 }
 
 /* Eyes */
+@keyframes moveEyes {
+  0% {
+    left: 8px;
+  }
+  25% {
+    left: 2px;
+  }
+  40% {
+    left: 9px;
+  }
+  50% {
+    left: 5px;
+  }
+  80% {
+    left: 5px;
+  }
+  100% {
+    left: 8px;
+  }
+}
+
 .leftEye {
   background: white;
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
 
   position: absolute;
@@ -49,15 +70,19 @@ body {
   border-radius: 50%;
 
   position: absolute;
-  top: -4px;
-  right: 6px;
+  top: -5px;
+  left: 8px;
   z-index: 2;
+
+  animation-name: moveEyes;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
 .rightEye {
   background: white;
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
 
   position: absolute;
@@ -82,16 +107,59 @@ body {
   border-radius: 50%;
 
   position: absolute;
-  top: -4px;
-  right: 6px;
+  top: -5px;
+  right: 2px;
   z-index: 2;
+
+  animation-name: moveEyes;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveEyebrows {
+  0% {
+    top: 20px;
+  }
+  25% {
+    top: 20px;
+  }
+  65% {
+    top: 20px;
+  }
+  70% {
+    top: 15px;
+  }
+  80% {
+    top: 15px;
+  }
+  81% {
+    top: 20px;
+  }
+  100% {
+    top: 20px;
+  }
+}
+
+.catEyeBrows1 {
+  height: 1px;
+  width: 45px;
+  background: black;
+
+  position: absolute;
+  top: 20px;
+  left: 18px;
+  z-index: 3;
+
+  animation-name: moveEyebrows;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
 /* Ears */
 .leftEar {
   height: 0;
   width: 0;
-  border-bottom: 50px solid #b9c7c9;
+  border-bottom: 56px solid #b9c7c9;
   border-right: 50px solid transparent;
 
   position: absolute;
@@ -115,7 +183,7 @@ body {
 .rightEar {
   height: 0;
   width: 0;
-  border-bottom: 50px solid #b9c7c9;
+  border-bottom: 56px solid #b9c7c9;
   border-left: 50px solid transparent;
 
   position: absolute;
@@ -251,8 +319,44 @@ body {
   top: 3px;
 }
 
-/* Slogan */
-.catBackButton {
-  height: 100px;
-  width: 50px;
+/* Back Button */
+.backButton {
+  background: #e1e7e8;
+  text-decoration: none;
+
+  height: 85px;
+  width: 70px;
+  border-radius: 50%;
+  border-style: none;
+
+  position: absolute;
+  top: 80px;
+  left: 5px;
+}
+
+.backButton:active {
+  background: #a5b5b8;
+}
+
+.catBody {
+  background: #b9c7c9;
+  height: 150px;
+  width: 91px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 40px;
+  left: -6px;
+  z-index: -1;
+}
+
+.catTail {
+  height: 15px;
+  width: 150px;
+  background: #b9c7c9;
+  border-bottom-right-radius: 70%;
+
+  position: absolute;
+  left: 40px;
+  top: 135px;
 }
