@@ -252,3 +252,7 @@ body {
 }
 
 /* Slogan */
+.catBackButton {
+  height: 100px;
+  width: 50px;
+}
