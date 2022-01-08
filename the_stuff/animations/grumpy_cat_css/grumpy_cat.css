@@ -320,7 +320,7 @@ body {
 }
 
 /* Back Button */
-.backButton {
+#backButton {
   background: #e1e7e8;
   text-decoration: none;
 
@@ -334,7 +334,7 @@ body {
   left: 5px;
 }
 
-.backButton:active {
+#backButton:active {
   background: #a5b5b8;
 }
 
