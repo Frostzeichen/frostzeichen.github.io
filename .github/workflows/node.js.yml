@@ -46,4 +46,3 @@ jobs:
 
       - name: Deployment functions custom
         run: pnpm run build --if-present
-        run: pnpm test
