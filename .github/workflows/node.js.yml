@@ -43,6 +43,3 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-
-      - name: Deployment functions custom
-        run: pnpm deploy
