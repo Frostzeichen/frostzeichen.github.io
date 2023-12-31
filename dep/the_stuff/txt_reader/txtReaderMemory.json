@@ -1,0 +1,18 @@
+{
+  "readerContent": [
+    {
+      "File ID": 0,
+      "dog": "cat"
+    },
+    {
+      "File ID": 1,
+      "File Name": "txtReaderInfo.txt",
+      "Content": "This is the Text Reader. It reads content from a text file uploaded to the server."
+    },
+    {
+      "File ID": 2,
+      "File Name": "no name.txt",
+      "Content": "This file has no name. It does have some content though..."
+    }
+  ]
+}
