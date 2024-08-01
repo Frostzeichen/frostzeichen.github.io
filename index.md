@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Terenz's Site"
-  text: "This is a test site"
+  name: "Terenz's Blog"
+  text: "A VitePress Site"
   tagline: My great project tagline
   actions:
     - theme: brand
@@ -20,8 +20,6 @@ features:
   - title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature D
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 

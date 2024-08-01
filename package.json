@@ -1,7 +1,6 @@
 {
   "name": "frostzeichen.github.io",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,9 +8,9 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
     "vitepress": "^1.3.1"
   }
