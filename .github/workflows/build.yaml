@@ -3,49 +3,50 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - master
+      - master  # Deploy only when pushing to master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      # 1️⃣ Checkout repo
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Set up Go
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
           go-version: '1.22'
 
-      # 3️⃣ Install dependencies
       - name: Install dependencies
         run: go mod tidy
 
-      # 4️⃣ Clean and rebuild
-      - name: Prepare build directory
+      - name: Build site
         run: |
           rm -rf build
           mkdir -p build
+          go run main.go
 
-      # 5️⃣ Convert Markdown to HTML
-      - name: Build site
-        run: go run main.go
-
-      # 6️⃣ Copy static files correctly
-      - name: Copy static assets
+      - name: Copy static files
         run: cp -r static build/
 
-      # 7️⃣ List build contents for debugging
-      - name: Show build output
-        run: ls -R build
-
-      # 8️⃣ Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          force_orphan: true
+          path: build
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
