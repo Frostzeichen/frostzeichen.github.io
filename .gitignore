@@ -1,0 +1,13 @@
+# Go
+build/
+bin/
+*.exe
+*.log
+
+# Node or misc
+node_modules/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
