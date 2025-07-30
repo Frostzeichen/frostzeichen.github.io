@@ -35,11 +35,11 @@ func main() {
 <html>
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../static/style.css">
+  <link rel="stylesheet" href="./static/style.css">
 </head>
 <body>
 %s
-<script src="../static/script.js"></script>
+<script src="./static/script.js"></script>
 </body>
 </html>`, buf.String())
 

@@ -36,7 +36,7 @@ jobs:
 
       # 6️⃣ Copy static files correctly
       - name: Copy static assets
-        run: cp -r static/* build/
+        run: cp -r static build/
 
       # 7️⃣ List build contents for debugging
       - name: Show build output
