@@ -1,0 +1,19 @@
+While working on the GUI part for the [AI Mansion Project](https://example.com/episode-1-of-the-ai-mansion-project), I had the idea of making a single large git directory for the whole project, and smaller git repositories for each sub-component.
+
+For context, the project contains a local GUI FE and BE, a (future) web FE, notebooks for R&D, and potentially a bunch of assets (some of which I might have to make myself locally).
+
+This made planning for a relatively minor project quite complex. It'd need a lot of other parts made with vastly different tools. The local GUI, for example, I plan to write that in something like raylib or Unreal Engine. I'm not sure about porting either to web though. Hopefully WASM should make this easier. Somehow.
+
+But imagine that. I have one part in raylib. Another part, probably a web backend running in Node or PHP, built entirely in either Typescript or Laravel, would handle user inputs via a web API. A third part will un-negotiably be in Python because that's what I'm used to working with in Jupyter Notebooks.
+
+Just those three in a single monolith would make an insanely large monolith. While it's not a problem having a monolith being the solo dev for this project, I imagine this would be difficult if I'd have a maintainer for each part in the future. Or if I ever have to work on something similar, it'd be good to know what to do in advance.
+
+So, for future me's sake I looked to Reddit for answers. First thing I found past the AI overview [was this gem from 3 years ago](https://www.reddit.com/r/webdev/comments/yhie92/comment/iudxvdv/):
+
+![**Figure 1.** *Reddit post that links to the "submodules" tool in git.*](/images/reddit-git-repo-inside-of-another-git-repo-is-this-an-acceptable-approach.png)
+
+So there is a *proper* way to do it in git. It's with the [submodules tool](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+
+But if you're expecting a tutorial from this article, all I can say is sorry. I'm still figuring this out right now.
+
+Though I *might* make one. Someday. Just not today.

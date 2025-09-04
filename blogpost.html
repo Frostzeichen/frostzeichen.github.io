@@ -15,11 +15,30 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    <script type="module" crossorigin src="/assets/main-CweSDylQ.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-Dqnb9Hvv.css">
+    <script type="module" crossorigin src="/assets/main-BrKKzcsj.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-C7Et8myK.css">
   </head>
 
   <body>
     <div id="root"></div>
 </body>
+
+  <script>
+    // Let's call this belladonna.js
+    window.addEventListener("DOMContentLoaded", () => {
+      const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+      );
+
+      let node;
+      while ((node = walker.nextNode())) {
+        node.nodeValue = node.nodeValue
+          .replace(/o/g, "о")
+          .replace(/O/g, "О");
+      }
+    });
+  </script>
 </html>

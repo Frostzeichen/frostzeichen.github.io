@@ -1,0 +1,129 @@
+This is an analysis of the data that I gathered from the [Food Prices in the Philippines dataset from the World Food Programme](https://data.humdata.org/dataset/wfp-food-prices-for-philippines?force_layout=desktop).
+
+Since this is just a practice run, this analysis (or whatever you might call it) only includes descriptive statistics for **rice** and **red onion** prices. There are no correlations, no testing, and absolutely no post-ad hoc here.
+
+Also, my writing is kinda rusty. I know. Deal with it.
+
+## Average Yearly Price of Rice in Nueva Ecija
+
+<Chart
+  title="Figure 1. The average yearly price per kilo of rice in Nueva Ecija."
+  data={[
+    { "year":2000,"avg":18.18 },
+    { "year":2001,"avg":18.98 },
+    { "year":2002,"avg":19.00 },
+    { "year":2003,"avg":19.00 },
+    { "year":2004,"avg":18.75 },
+    { "year":2005,"avg":20.38 },
+    { "year":2006,"avg":20.36 },
+    { "year":2007,"avg":21.29 },
+    { "year":2008,"avg":30.04 },
+    { "year":2009,"avg":30.25 },
+    { "year":2010,"avg":30.19 },
+    { "year":2011,"avg":31.40 },
+    { "year":2012,"avg":31.70 },
+    { "year":2013,"avg":32.58 },
+    { "year":2014,"avg":39.43 },
+    { "year":2015,"avg":38.08 },
+    { "year":2016,"avg":37.89 },
+    { "year":2017,"avg":38.78 },
+    { "year":2018,"avg":40.63 },
+    { "year":2019,"avg":36.54 },
+    { "year":2020,"avg":35.92 },
+    { "year":2021,"avg":35.14 },
+    { "year":2022,"avg":36.36 },
+    { "year":2023,"avg":41.29 }
+  ]}
+/>
+
+The province of **Nueva Ecija**, better known as the *Rice Granary of the Philippines*, is considered as the [main rice-producing province](https://region3.dilg.gov.ph/index.php/news-events/54-provincial-and-city-pages/nueva-ecija) of the country. As of 2021, the province is [known to have produced 3 Million metric tons of rice](https://rfo3.da.gov.ph/central-luzon-attains-3-7m-mt-or-2-92-increase-in-rice-production/), feeding a nation of mainly rice-consumers on its stellar back.
+
+The average price of rice in Nueva Ecija seems to have jumped in the years 2007-2008 and 2013-2014. These years coincide with [two economic financial crises](https://github.com/nvim-lua/kickstart.nvim) that may have had an adverse effect on the global economy: [the 2007-2008 financial crisis](https://www.investopedia.com/articles/economics/09/financial-crisis-review.asp) and [the 2014-2016 Russian financial crisis](https://en.wikipedia.org/wiki/Russian_financial_crisis_(2014%E2%80%932016)). How these crises may have affected the price of rice, however, remains unexplained. In fact, they might not even have had much of an effect at all.
+
+## Average Yearly Prices of Rice in NCR
+
+<Chart
+  title="Figure 2. The average yearly price per kilo of rice in NCR."
+  data={[
+    { "year":2000,"avg":17.37 },
+    { "year":2001,"avg":17.21 },
+    { "year":2002,"avg":17.30 },
+    { "year":2003,"avg":17.56 },
+    { "year":2004,"avg":17.84 },
+    { "year":2005,"avg":19.76 },
+    { "year":2006,"avg":20.26 },
+    { "year":2007,"avg":21.44 },
+    { "year":2008,"avg":29.37 },
+    { "year":2009,"avg":28.86 },
+    { "year":2010,"avg":29.01 },
+    { "year":2011,"avg":29.19 },
+    { "year":2012,"avg":29.48 },
+    { "year":2013,"avg":31.12 },
+    { "year":2014,"avg":38.24 },
+    { "year":2015,"avg":35.67 },
+    { "year":2016,"avg":34.17 },
+    { "year":2017,"avg":35.49 },
+    { "year":2018,"avg":39.20 },
+    { "year":2019,"avg":34.32 },
+    { "year":2020,"avg":35.31 },
+    { "year":2021,"avg":38.07 },
+    { "year":2022,"avg":38.98 },
+    { "year":2023,"avg":40.06 },
+    { "year":2024,"avg":44.01 }
+  ]}
+/>
+
+Possibly due to its close geographic proximity and easy land transportation access via the [Pan-Philippine Highway](https://en.wikipedia.org/wiki/Pan-Philippine_Highway), the price of rice in the **National Capital Region** (NCR) shares the same economic trends as that of Nueva Ecija's. As such, there were huge jumps in price during 2007-2008 and 2013-2014. Further, the sudden drop in average price during 2018-2019 is more noticeable in the NCR graph than in the Nueva Ecija graph, suggesting a sudden drop in the price of rice even before the [lockdowns of the COVID-19 pandemic in the Philippines](https://foreignpolicy.com/2020/03/14/duterte-quarantine-philippines-coronavirus-lockdown-launches-manila-into-pandemonium/).
+
+## Average Yearly Prices of Red Onions in Nueva Ecija
+
+<Chart
+  title="Figure 3. The average yearly price per kilo of red onions in Nueva Ecija."
+  data={[
+    { "year":2008,"avg":79.14 },
+    { "year":2009,"avg":64.53 },
+    { "year":2010,"avg":52.54 },
+    { "year":2012,"avg":75.64 },
+    { "year":2013,"avg":60.82 },
+    { "year":2014,"avg":56.00 },
+    { "year":2015,"avg":56.40 },
+    { "year":2016,"avg":86.69 },
+    { "year":2017,"avg":64.49 },
+    { "year":2018,"avg":84.64 },
+    { "year":2019,"avg":55.91 },
+    { "year":2020,"avg":149.25 },
+    { "year":2021,"avg":108.33 },
+    { "year":2022,"avg":161.67 },
+    { "year":2023,"avg":121.67 },
+    { "year":2024,"avg":126.25 }
+  ]}
+/>
+
+**Nueva Ecija** is also [a major producer of red onions](https://www.pna.gov.ph/articles/1218193), projected to produce 300,000 metric tons in 2024. As such, the average price of onions has fallen by 14.29% from its historical peak of 160 per kilo in 2022.
+
+## Average Yearly Prices of Red Onions in NCR
+
+<Chart
+  title="Figure 4. The average yearly price per kilo of red onions in NCR."
+  data={[
+    { "year":2008,"avg":86.90 },
+    { "year":2009,"avg":63.31 },
+    { "year":2010,"avg":51.31 },
+    { "year":2012,"avg":74.58 },
+    { "year":2013,"avg":57.41 },
+    { "year":2014,"avg":42.79 },
+    { "year":2017,"avg":65.55 },
+    { "year":2018,"avg":93.01 },
+    { "year":2019,"avg":66.76 },
+    { "year":2020,"avg":116.47 },
+    { "year":2021,"avg":122.90 },
+    { "year":2022,"avg":87.09 },
+    { "year":2023,"avg":188.53 }
+  ]}
+/>
+
+On the other hand, the average price for red onions in NCR jumped to a historical peak of 188 per kilogram in 2023. It is possible that this price would have gone down by 2024 [due to importation](https://www.philstar.com/headlines/2023/12/02/2315802/21000-mt-imported-onions-arrive-yearend). In fact, this could have been part of the reason why the prices in NCR appears more stable at face value.
+
+## Conclusion
+
+In both rice and red onions, the trend seems to favor an increase in price per kilogram of produce. However, this increase seems more noticeable on the prices of rice than in the prices of red onions. Further research is required to show just how much these prices are affected by economic trends in the global market, as well as the effect of price changes in other domestic areas which produce similar produce.
